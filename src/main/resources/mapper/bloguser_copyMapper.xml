@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootdemo.model.bloguser_copyMapper">
+  <resultMap id="BaseResultMap" type="com.example.springbootdemo.model.bloguser_copy">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="regTime" jdbcType="DATE" property="regtime" />
+    <result column="regIp" jdbcType="VARCHAR" property="regip" />
+  </resultMap>
+  <insert id="insert" parameterType="com.example.springbootdemo.model.bloguser_copy">
+    insert into bloguser_copy (id, email, password, 
+      username, role, status, 
+      regTime, regIp)
+    values (#{id,jdbcType=BIGINT}, #{email,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{username,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{regtime,jdbcType=DATE}, #{regip,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.springbootdemo.model.bloguser_copy">
+    insert into bloguser_copy
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="role != null">
+        role,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="regtime != null">
+        regTime,
+      </if>
+      <if test="regip != null">
+        regIp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null">
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="regtime != null">
+        #{regtime,jdbcType=DATE},
+      </if>
+      <if test="regip != null">
+        #{regip,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
