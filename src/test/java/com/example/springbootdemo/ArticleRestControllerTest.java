@@ -4,23 +4,31 @@ import com.example.springbootdemo.controller.ArticleRestController;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import javax.annotation.Resource;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @Slf4j
+@RunWith(SpringRunner.class)
+@AutoConfigureMockMvc
 @SpringBootTest
 public class ArticleRestControllerTest{
+    @Resource
     private MockMvc mockMvc;
     
-    @Before
-    public void setUp(){mockMvc = MockMvcBuilders.standaloneSetup(new ArticleRestController()).build();}
+    //@Before
+    //public void setUp(){mockMvc = MockMvcBuilders.standaloneSetup(new ArticleRestController()).build();}
     
     @Test
     public void saveArticle() throws Exception{
@@ -34,9 +42,7 @@ public class ArticleRestControllerTest{
             + "   \"reader\":[{\"name\":\"name1\",\"age\":18},{\"name\":\"name2\",\"age\":35}]\n"
             + "}";
     MvcResult result =
-        mockMvc
-            .perform(
-                MockMvcRequestBuilders.request(HttpMethod.POST, "/rest/article")
+        mockMvc.perform(MockMvcRequestBuilders.request(HttpMethod.POST, "/rest/article")
                     .contentType("application/json")
                     .content(article))
             .andExpect(MockMvcResultMatchers.status().isOk())

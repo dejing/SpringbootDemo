@@ -15,7 +15,7 @@ import java.util.Date;
 public class ArticleRestController
 {
     @Resource
-    private ArticleRestService articleRestService;
+    ArticleRestService articleRestService;
 
     @PostMapping("/article")
     public AjaxResponse saveArticle(@RequestBody Article article)

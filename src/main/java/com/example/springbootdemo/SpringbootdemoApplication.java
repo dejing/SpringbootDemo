@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@EnableWebMvc
 @SpringBootApplication
 public class SpringbootdemoApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(SpringbootdemoApplication.class, args);
     }

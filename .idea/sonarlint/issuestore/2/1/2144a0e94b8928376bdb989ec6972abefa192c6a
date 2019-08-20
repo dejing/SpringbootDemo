@@ -1,8 +1,8 @@
 
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÀŠÈþÿÿÿÿ8ÁÞ¦Ê-
-isquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(ü¤„ì8§íêœÊ-
-asquid:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(Å¨éËÿÿÿÿÿ8ºÝ“þÉ-
 [
 squid:S106!"9Replace this use of System.out or System.err by a logger.(ò•Æ†ýÿÿÿÿ8Ñ´“þÉ-
+isquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(ü¤„ì8§íêœÊ-
 Ksquid:S1905"(Remove this unnecessary cast to "Entry".(ô»ÿçÿÿÿÿÿ8ý¦–þÉ-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÀŠÈþÿÿÿÿ8ÁÞ¦Ê-
 nsquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8§íêœÊ-
+asquid:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(Å¨éËÿÿÿÿÿ8ºÝ“þÉ-
