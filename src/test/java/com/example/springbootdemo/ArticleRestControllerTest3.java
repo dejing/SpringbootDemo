@@ -2,14 +2,13 @@ package com.example.springbootdemo;
 
 import com.example.springbootdemo.controller.ArticleRestController;
 import com.example.springbootdemo.model.Article;
-import com.example.springbootdemo.service.ArticleRestService;
+import com.example.springbootdemo.service.impl.ArticleRestJDBCServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpMethod;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -35,7 +34,7 @@ public class ArticleRestControllerTest3 {
     private MockMvc mockMvc;
 
     @MockBean
-    ArticleRestService articleRestService;
+    ArticleRestJDBCServiceImpl articleRestJDBCServiceImpl;
 //
 //    @Before
 //    public void setUp(){mockMvc = MockMvcBuilders.standaloneSetup(new ArticleRestController()).build();}
@@ -55,8 +54,8 @@ public class ArticleRestControllerTest3 {
 
         ObjectMapper objectMapper = new ObjectMapper();
         Article articleobj = objectMapper.readValue(article, Article.class);
-        articleRestService.saveArticle(articleobj);
-        when(articleRestService.saveArticle(articleobj)).thenReturn("ok");
+        //articleRestJDBCServiceImpl.saveArticle(articleobj);
+        when(articleRestJDBCServiceImpl.saveArticle(articleobj)).thenReturn(articleobj);
 
     MvcResult result =
         mockMvc
