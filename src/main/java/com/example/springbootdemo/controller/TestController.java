@@ -14,26 +14,27 @@ import java.util.Set;
 @Slf4j
 @RestController
 public class TestController {
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+//    @Autowired
+//    private JdbcTemplate jdbcTemplate;
     @RequestMapping("/getUsers")
     public List<Map<String, Object>> getDbType(){
-        String sql = "select * from bloguser";
-        List<Map<String, Object>> list =  jdbcTemplate.queryForList(sql);
-        for (Map<String, Object> map : list) {
-            Set<Map.Entry<String, Object>> entries = map.entrySet( );
-            if(entries != null) {
-                Iterator<Map.Entry<String, Object>> iterator = entries.iterator( );
-                while(iterator.hasNext( )) {
-                    Map.Entry<String, Object> entry =(Map.Entry<String, Object>) iterator.next( );
-                    Object key = entry.getKey( );
-                    Object value = entry.getValue();
-                    System.out.println(key+":"+value);
-                    log.debug(key+":"+value);
-                }
-            }
-        }
-        return list;
+//        String sql = "select * from bloguser";
+//        List<Map<String, Object>> list =  jdbcTemplate.queryForList(sql);
+//        for (Map<String, Object> map : list) {
+//            Set<Map.Entry<String, Object>> entries = map.entrySet( );
+//            if(entries != null) {
+//                Iterator<Map.Entry<String, Object>> iterator = entries.iterator( );
+//                while(iterator.hasNext( )) {
+//                    Map.Entry<String, Object> entry =(Map.Entry<String, Object>) iterator.next( );
+//                    Object key = entry.getKey( );
+//                    Object value = entry.getValue();
+//                    System.out.println(key+":"+value);
+//                    log.debug(key+":"+value);
+//                }
+//            }
+//        }
+//        return list;
+        return null;
     }
 //    @RequestMapping("/showUser/{id}")
 //    public String selectUser (@PathVariable int id, Model model){

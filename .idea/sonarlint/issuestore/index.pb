@@ -225,3 +225,5 @@ V
 Usrc/main/java/com/example/springbootdemo/service/impl/ArticleRestJDBCServiceImpl.java,e\e\eea83367f6f5bdac7b9cec00b1b15f4c75d82924
 p
 @src/main/java/com/example/springbootdemo/dao/ArticleJDBCDAO.java,d\2\d2313ca70ec74c3f4d2455caadc846d78de30b2c
+u
+Esrc/main/java/com/example/springbootdemo/config/DataSourceConfig.java,a\f\af42bbe02f4533294a60474eaf0285c93b3e0ad8
