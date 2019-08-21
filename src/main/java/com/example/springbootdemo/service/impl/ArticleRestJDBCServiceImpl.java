@@ -31,7 +31,7 @@ public class ArticleRestJDBCServiceImpl implements ArticleRestService {
     {
         articleJDBCDAO.save(article, primaryJdbcTemplate);
         articleJDBCDAO.save(article, secondaryJdbcTemplate);
-
+        int a = 2/0;
         return article;
     }
 
