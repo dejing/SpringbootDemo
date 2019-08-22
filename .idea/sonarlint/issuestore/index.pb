@@ -227,3 +227,17 @@ p
 @src/main/java/com/example/springbootdemo/dao/ArticleJDBCDAO.java,d\2\d2313ca70ec74c3f4d2455caadc846d78de30b2c
 u
 Esrc/main/java/com/example/springbootdemo/config/DataSourceConfig.java,a\f\af42bbe02f4533294a60474eaf0285c93b3e0ad8
+k
+;.idea/libraries/Maven__com_atomikos_atomikos_util_4_0_6.xml,0\4\0496eac74c17ebab1d20b56de0d08f7cd74ae5a1
+j
+:.idea/libraries/Maven__com_atomikos_transactions_4_0_6.xml,7\a\7ad22783e0e8815fdbe2929cc7f36589eb6480d1
+n
+>.idea/libraries/Maven__com_atomikos_transactions_api_4_0_6.xml,9\0\90bf3c7ce074384a778f7351dd29e0ad13afcee1
+o
+?.idea/libraries/Maven__com_atomikos_transactions_jdbc_4_0_6.xml,5\5\55960a67d45a64fccdbfa212e05e1caf8c4c5b1c
+n
+>.idea/libraries/Maven__com_atomikos_transactions_jta_4_0_6.xml,9\8\988c54017ff70040e8ade5dd7f07603a97edbd60
+d
+4.idea/libraries/Maven__javax_transaction_jta_1_1.xml,0\c\0c10ac2baa52f31ac48899ab7c9c2187ac900141
+}
+Msrc/main/java/com/example/springbootdemo/config/TransactionManagerConfig.java,a\6\a6ed02f5d629ec65d56aeddbf4654c627f698f24
