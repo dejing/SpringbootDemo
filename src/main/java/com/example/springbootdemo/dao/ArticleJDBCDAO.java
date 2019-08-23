@@ -34,10 +34,10 @@ public class ArticleJDBCDAO {
     }
     public Article findById(Long id, JdbcTemplate jdbcTemplate){
         return (Article)jdbcTemplate.queryForObject("SELECT * FROM article WHERE id=?", new Object[]{id},
-                new BeanPropertyRowMapper<>(Article.class));
+                new BeanPropertyRowMapper(Article.class));
     }
 
     public List<Article> findAll(JdbcTemplate jdbcTemplate){
-        return (List<Article>)jdbcTemplate.query("SELECT * FROM article ", new BeanPropertyRowMapper<>(Article.class));
+        return (List<Article>)jdbcTemplate.query("SELECT * FROM article ", new BeanPropertyRowMapper(Article.class));
     }
 }

@@ -20,7 +20,7 @@ public class DataSourceConfig {
         return new AtomikosDataSourceBean();
     }
 
-    @Bean(initMethod = "init", destroyMethod = "close", name = "primaryDataSource")
+    @Bean(initMethod = "init", destroyMethod = "close", name = "secondaryDataSource")
     @ConfigurationProperties(prefix = "secondarydb")
     public DataSource secondaryDataSource(){
         return new AtomikosDataSourceBean();
